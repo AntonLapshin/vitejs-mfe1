@@ -9,12 +9,13 @@ export default defineConfig({
     federation({
       name: 'mfe1',
       filename: 'remoteEntry.js',
-      // exposes: {
-      //   './MFE1': './src/App.tsx',
-      // },
-      remotes: {
-        core: 'https://vitejsvitehd44ix-1t3m--4173.local-credentialless.webcontainer.io/assets/remoteEntry.js',
+      exposes: {
+        './App': './src/App.tsx',
       },
+      remotes: {
+        core: 'http://localhost:4173/assets/remoteEntry.js',
+      },
+      shared: ['react', 'react-dom'],
     }),
   ],
 });
