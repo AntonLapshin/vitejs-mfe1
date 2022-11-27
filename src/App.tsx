@@ -5,12 +5,12 @@ import './App.css';
 function App() {
   useEffect(() => {
     const call = async () => {
-      const promise = import('core/Api').then(
-        (module) => module.v0
-      ) as Promise<any>;
-      const Api = await promise;
-      console.log(Api);
-      Api.authenticate();
+      const Api = await import('core/Api');
+      console.log({ Api });
+      const v0 = Api.default.v0;
+      console.log({ v0 });
+
+      v0.authenticate();
     };
     call();
   }, []);
