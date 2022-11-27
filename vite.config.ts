@@ -13,7 +13,7 @@ export default defineConfig({
       //   './MFE1': './src/App.tsx',
       // },
       remotes: {
-        core: 'https://vitejsvitehd44ix-1t3m--4173.local-credentialless.webcontainer.io/assets/remoteEntry.js',
+        core: 'https://vitejsvitehd44ix-1t3m--5000.local-credentialless.webcontainer.io/assets/remoteEntry.js',
       },
     }),
   ],
